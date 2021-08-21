@@ -1,0 +1,50 @@
+---
+title: Blog
+description: Mision y Vision
+image: https://source.unsplash.com/MqJX_8EaStM/2000x1322?a=.png
+---
+
+<section class="hero" style="background-image: url(https://i.pinimg.com/originals/59/9a/f3/599af3822110b467fd2a3fbea70e4e52.jpg)">
+	<div class="inner-hero text-container">
+		<div class="hero-text-container">
+			<h1 class="editable">Comentarios acerca de nosotros</h1>
+			<p class="subtext editable"> Crispin Bar-Restaurante fue creado con la intención que puedes venir a pasar un buen rato con amigos y familia, contando con platos exquisitos y la opción de usar el karaoke para que disfrutes y bajes la comida cantando. Nuestros horarios son son de lunes a viernes de 8:00 A.M – 23:00 P.M  y Sabados y domingo de 6p.m a 12 a.m.</p>
+		</div>
+	</div>
+</section>
+	<section class="info">
+		<div class="container flex">
+			<div class="text">
+				<h2 class="editable">Sobredosis</h2>
+				<p class="editable">
+				Esta es una foto previa a un evento de una final nacional que se realiza de batallas de rap en nuestro establecimiento, dando un ganador que se fue a una batalla internacional quedando campeon entre 52 participantes
+				</p>
+			</div>
+			<div class="image">
+				<img class="editable" src="https://scontent.fgye1-1.fna.fbcdn.net/v/t1.0-0/c0.0.206.206a/p206x206/119842774_2983442428427269_5879686894326661333_o.jpg?_nc_cat=101&_nc_sid=110474&_nc_ohc=c2sby8dYRmoAX9Ly74z&_nc_ht=scontent.fgye1-1.fna&_nc_tp=27&oh=b7104db0c901e5c535f28f9b611e3719&oe=5FABF83A " alt="Screenshot" />
+			</div>
+		</div>
+	</section>
+
+<section>
+	<div class="text-container">
+		<p class="editor-link"><a href="cloudcannon:collections/_posts" class="btn"><strong>&#9998;</strong> Add Post</a></p>
+		<ul class="blog-posts">
+			{% include list-posts.html posts=paginator.posts %}
+		</ul>
+
+		{% if paginator.total_pages > 1 %}
+			<div class="pagination">
+				{% if paginator.previous_page %}
+					<a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="previous btn">&larr; Newer posts</a>
+				{% endif %}
+
+				<span class="page_number ">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+				{% if paginator.next_page %}
+					<a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="next btn">Older posts &rarr;</a>
+				{% endif %}
+			</div>
+		{% endif %}
+	</div>
+</section>
